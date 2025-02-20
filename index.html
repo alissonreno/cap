@@ -49,30 +49,62 @@
             <p>Fique por dentro das últimas notícias e informações do Athletico Paranaense.</p>
         </section>
 
+        <section id="historia">
+            <h2>História</h2>
+            <p>O Athletico Paranaense, fundado em 1924, é um dos clubes mais tradicionais do futebol brasileiro. Conheça nossa trajetória e conquistas.</p>
+        </section>
+
+        <section id="elenco">
+            <h2>Elenco</h2>
+            <p>Confira os jogadores que fazem parte do nosso elenco nesta temporada.</p>
+        </section>
+
         <section id="noticias">
             <h2>Últimas Notícias</h2>
             <div class="news-container">
-                <div class="news-card animate">
+                <article class="news-card animate">
                     <img src="noticia1.jpg" alt="Debate sobre gramado sintético" loading="lazy">
                     <h3>Debate sobre gramado sintético</h3>
                     <p>O Athletico-PR defendeu o uso do gramado sintético na Ligga Arena...</p>
-                    <a href="#">Leia Mais</a>
-                </div>
-                <div class="news-card animate">
+                    <button class="read-more" data-modal="modal1">Leia Mais</button>
+                </article>
+                <article class="news-card animate">
                     <img src="noticia2.jpg" alt="Empate com o Cascavel" loading="lazy">
                     <h3>Empate com o Cascavel</h3>
                     <p>O Athletico-PR empatou sem gols com o FC Cascavel...</p>
-                    <a href="#">Leia Mais</a>
-                </div>
-                <div class="news-card animate">
+                    <button class="read-more" data-modal="modal2">Leia Mais</button>
+                </article>
+                <article class="news-card animate">
                     <img src="noticia3.jpg" alt="Próximo jogo" loading="lazy">
                     <h3>Próximo jogo</h3>
                     <p>O Athletico-PR enfrentará o Azuriz nas quartas de final...</p>
-                    <a href="#">Leia Mais</a>
-                </div>
+                    <button class="read-more" data-modal="modal3">Leia Mais</button>
+                </article>
             </div>
-			
         </section>
+
+        <!-- Modais para Notícias -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Debate sobre gramado sintético</h3>
+                <p>O Athletico-PR defendeu o uso do gramado sintético na Ligga Arena, destacando suas vantagens para o desempenho dos jogadores e a redução de custos com manutenção.</p>
+            </div>
+        </div>
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Empate com o Cascavel</h3>
+                <p>O Athletico-PR empatou sem gols com o FC Cascavel em um jogo emocionante, mas que deixou a torcida ansiosa pela próxima partida.</p>
+            </div>
+        </div>
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Próximo jogo</h3>
+                <p>O Athletico-PR enfrentará o Azuriz nas quartas de final do campeonato. A partida promete ser um grande desafio para o time rubro-negro.</p>
+            </div>
+        </div>
 
         <section id="galeria">
             <h2>Galeria de Fotos</h2>
@@ -121,13 +153,14 @@
                 </tbody>
             </table>
         </section>
-		<div class="newsletter">
-    <h3>Assine nossa newsletter</h3>
-    <form id="newsletter-form">
-        <input type="email" placeholder="Seu e-mail" required>
-        <button type="submit">Assinar</button>
-    </form>
-</div>
+
+        <section class="newsletter">
+            <h3>Assine nossa newsletter</h3>
+            <form id="newsletter-form">
+                <input type="email" placeholder="Seu e-mail" required>
+                <button type="submit">Assinar</button>
+            </form>
+        </section>
 
         <section id="contato">
             <h2>Entre em Contato</h2>
@@ -147,13 +180,15 @@
 
     <footer>
         <div class="social-icons-footer">
-            <a href="https://www.instagram.com/alissonreno/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-            <a href="https://twitter.com/CAP" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.facebook.com/CAP" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/athletico/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/AthleticoPR" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/AthleticoPR" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
         </div>
         <p>&copy; 2025 Alisson CAP - Todos os direitos reservados.</p>
     </footer>
-	<button id="back-to-top" title="Voltar ao topo">↑</button>
+
+    <button id="back-to-top" title="Voltar ao topo">↑</button>
+
     <script src="script.js"></script>
 </body>
 </html>

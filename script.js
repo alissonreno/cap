@@ -1,13 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Configurações iniciais
-    initAnimations();
-    initCarousel();
-    initDarkMode();
-});
-
-// Função para inicializar as animações
-function initAnimations() {
-    // Animação de Fade-In para cards de notícias
+    // Animação de Fade-In para cards
     gsap.from(".news-card", {
         opacity: 0,
         y: 50,
@@ -18,17 +10,41 @@ function initAnimations() {
             start: "top 80%",
         },
     });
-}
 
-// Função para inicializar o carrossel de imagens
-function initCarousel() {
+    // Modal para notícias
+    const modals = document.querySelectorAll(".modal");
+    const readMoreButtons = document.querySelectorAll(".read-more");
+    const closeButtons = document.querySelectorAll(".close");
+
+    readMoreButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const modalId = button.getAttribute("data-modal");
+            const modal = document.getElementById(modalId);
+            modal.style.display = "flex";
+        });
+    });
+
+    closeButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const modal = button.closest(".modal");
+            modal.style.display = "none";
+        });
+    });
+
+    // Fechar modal ao clicar fora
+    window.addEventListener("click", (e) => {
+        if (e.target.classList.contains("modal")) {
+            e.target.style.display = "none";
+        }
+    });
+
+    // Carrossel de Imagens
     const carouselImages = document.querySelector(".carousel-images");
     const images = document.querySelectorAll(".carousel-images img");
     const prevButton = document.querySelector(".carousel .prev");
     const nextButton = document.querySelector(".carousel .next");
     let currentIndex = 0;
 
-    // Função para mostrar a imagem atual
     function showImage(index) {
         images.forEach((img, i) => {
             img.classList.remove("active");
@@ -36,13 +52,11 @@ function initCarousel() {
         });
     }
 
-    // Evento para o botão "Anterior"
     prevButton.addEventListener("click", () => {
         currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
         showImage(currentIndex);
     });
 
-    // Evento para o botão "Próximo"
     nextButton.addEventListener("click", () => {
         currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
         showImage(currentIndex);
@@ -72,12 +86,22 @@ function initCarousel() {
         isDragging = false;
     });
 
-    // Inicializa o carrossel com a primeira imagem ativa
-    showImage(currentIndex);
-}
+    // Botão "Voltar ao Topo"
+    const backToTopButton = document.getElementById("back-to-top");
 
-// Função para inicializar o Dark Mode
-function initDarkMode() {
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    });
+
+    backToTopButton.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // Dark Mode
     const darkModeToggle = document.createElement("button");
     darkModeToggle.textContent = "🌙";
     darkModeToggle.style.position = "fixed";
@@ -91,35 +115,13 @@ function initDarkMode() {
     darkModeToggle.style.cursor = "pointer";
     document.body.appendChild(darkModeToggle);
 
-    // Verifica a preferência do usuário no localStorage
-    if (localStorage.getItem("darkMode") === "true") {
-        document.body.classList.add("dark-mode");
-    }
-
-    // Evento para alternar o Dark Mode
     darkModeToggle.addEventListener("click", () => {
         document.body.classList.toggle("dark-mode");
         localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
     });
-}
 
-const backToTopButton = document.getElementById("back-to-top");
-
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-        backToTopButton.style.display = "block";
-    } else {
-        backToTopButton.style.display = "none";
+    // Verificar preferência do usuário ao carregar a página
+    if (localStorage.getItem("darkMode") === "true") {
+        document.body.classList.add("dark-mode");
     }
-});
-
-backToTopButton.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-});
-
-document.getElementById("newsletter-form").addEventListener("submit", function (e) {
-    e.preventDefault();
-    const email = this.querySelector("input").value;
-    alert(`Obrigado por assinar nossa newsletter com o e-mail: ${email}`);
-    this.reset();
 });
