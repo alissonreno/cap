@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO -->
+    <meta name="description" content="Fique por dentro das últimas notícias, jogos e informações do Athletico Paranaense. Acesse agora!">
+    <meta name="keywords" content="Athletico Paranaense, Notícias Athletico, Calendário de Jogos, Galeria de Fotos">
+    <meta name="author" content="Alisson Athletico Paranaense">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Athletico Paranaense - Notícias e Informações">
+    <meta property="og:description" content="Acompanhe as últimas notícias, calendário de jogos e galeria de fotos do Athletico Paranaense.">
+    <meta property="og:image" content="escudo-athletico.png">
+    <meta property="og:url" content="https://www.seusite.com">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://www.seusite.com">
+    <title>Athletico Paranaense - Notícias e Informações</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Ícones Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="escudo-athletico.png" alt="Escudo Athletico Paranaense" loading="lazy">
+        </div>
+        <nav>
+            <button id="menu-toggle" aria-label="Abrir menu"><i class="fas fa-bars"></i></button>
+            <ul id="menu">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#historia">História</a></li>
+                <li><a href="#elenco">Elenco</a></li>
+                <li><a href="#noticias">Notícias</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#calendario">Calendário</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons-header">
+            <a href="https://www.instagram.com/athletico/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/AthleticoPR" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/AthleticoPR" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+        </div>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>Bem-vindo ao Mundo Rubro-Negro!</h1>
+            <p>Fique por dentro das últimas notícias e informações do Athletico Paranaense.</p>
+        </section>
+
+        <section id="noticias">
+            <h2>Últimas Notícias</h2>
+            <div class="news-container">
+                <div class="news-card animate">
+                    <img src="noticia1.jpg" alt="Debate sobre gramado sintético" loading="lazy">
+                    <h3>Debate sobre gramado sintético</h3>
+                    <p>O Athletico-PR defendeu o uso do gramado sintético na Ligga Arena...</p>
+                    <a href="#">Leia Mais</a>
+                </div>
+                <div class="news-card animate">
+                    <img src="noticia2.jpg" alt="Empate com o Cascavel" loading="lazy">
+                    <h3>Empate com o Cascavel</h3>
+                    <p>O Athletico-PR empatou sem gols com o FC Cascavel...</p>
+                    <a href="#">Leia Mais</a>
+                </div>
+                <div class="news-card animate">
+                    <img src="noticia3.jpg" alt="Próximo jogo" loading="lazy">
+                    <h3>Próximo jogo</h3>
+                    <p>O Athletico-PR enfrentará o Azuriz nas quartas de final...</p>
+                    <a href="#">Leia Mais</a>
+                </div>
+            </div>
+			
+        </section>
+
+        <section id="galeria">
+            <h2>Galeria de Fotos</h2>
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="foto1.jpg" alt="Jogo Athletico" class="active" loading="lazy">
+                    <img src="foto2.jpg" alt="Torcida Athletico" loading="lazy">
+                    <img src="foto3.jpg" alt="Estádio Athletico" loading="lazy">
+                    <img src="foto4.jpg" alt="Jogadores Athletico" loading="lazy">
+                </div>
+                <button class="prev" aria-label="Imagem anterior">&#10094;</button>
+                <button class="next" aria-label="Próxima imagem">&#10095;</button>
+            </div>
+        </section>
+
+        <section id="calendario">
+            <h2>Calendário de Jogos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Horário</th>
+                        <th>Adversário</th>
+                        <th>Local</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>21/02/2025</td>
+                        <td>20:00</td>
+                        <td>Azuriz</td>
+                        <td>Estádio Os Pioneiros</td>
+                    </tr>
+                    <tr>
+                        <td>25/02/2025</td>
+                        <td>21:30</td>
+                        <td>Pouso Alegre</td>
+                        <td>Estádio Manduzão</td>
+                    </tr>
+                    <tr>
+                        <td>08/03/2025</td>
+                        <td>16:00</td>
+                        <td>Athletico PR</td>
+                        <td>Arena da Baixada</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+		<div class="newsletter">
+    <h3>Assine nossa newsletter</h3>
+    <form id="newsletter-form">
+        <input type="email" placeholder="Seu e-mail" required>
+        <button type="submit">Assinar</button>
+    </form>
+</div>
+
+        <section id="contato">
+            <h2>Entre em Contato</h2>
+            <form action="#" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="assunto">Assunto:</label>
+                <input type="text" id="assunto" name="assunto" required>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-icons-footer">
+            <a href="https://www.instagram.com/athletico/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/AthleticoPR" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/AthleticoPR" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+        </div>
+        <p>&copy; 2025 Alisson CAP - Todos os direitos reservados.</p>
+    </footer>
+	<button id="back-to-top" title="Voltar ao topo">↑</button>
+    <script src="script.js"></script>
+</body>
+</html>
